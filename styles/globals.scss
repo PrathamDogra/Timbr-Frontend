@@ -1,0 +1,76 @@
+// @import "./fonts";
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: auto;
+  font-family: "Gilroy", sans-serif;
+  margin: 0;
+  background-color: #121215;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-container {
+  position: relative;
+  padding: 24px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 90vh;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    // left: 50%;
+    // z-index: -100;
+    background-image: url("../public/assets/images/gradient.svg");
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    background-size: contain;
+    width: 1040px;
+    height: 570px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    max-width: 768px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page-container {
+    width: 100%;
+    max-width: 992px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page-container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .page-container {
+    width: 100%;
+    max-width: 1400px;
+  }
+}
